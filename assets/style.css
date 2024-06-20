@@ -1,0 +1,103 @@
+body{
+
+    
+
+}
+
+header{
+
+    display: flex;
+    justify-content: center;
+
+    border:solid;
+    background-color: bisque;
+    border-color:bisque;
+
+    margin-bottom:50px;
+
+
+}
+
+#mainContent{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+#searchSection{
+
+    display:flex;
+
+}
+
+#inputBox{
+
+    height:30px;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:10px;
+    width:300px;
+
+    background-color:ghostwhite;
+    border-color:ghostwhite;
+
+}
+
+
+#mainButtonContainer{
+
+    display:flex;
+    margin-bottom:50px;
+}
+
+#mainButton{
+
+    width:250px;
+    height:50px;
+
+    border:none;
+    background-color:rgb(231, 184, 184);
+    border-radius:20px;
+
+}
+
+#mainButton:hover{
+
+    cursor: pointer;
+    opacity:.9;
+
+}
+
+
+#informationDisplay{
+
+
+    border:solid;
+    border-radius:20px;
+
+    padding:20px;
+
+    width:700px;
+    height:200px;
+
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+#weatherCondition{
+
+    display:flex;
+    width:200px;
+    height:200px;
+    
+    
+    background-color:rgb(238, 227, 227);
+
+
+
+}
