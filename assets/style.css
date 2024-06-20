@@ -1,8 +1,4 @@
-body{
 
-    
-
-}
 
 header{
 
@@ -99,5 +95,38 @@ header{
     background-color:rgb(238, 227, 227);
 
 
+
+}
+
+
+#nextFiveDays{
+
+    margin-top:30px;
+    display: flex;
+
+    
+
+    
+
+}
+
+.dayCard{
+
+    width:auto;
+    height:250px;
+
+    padding-left:10px;
+    padding-right:60px;
+    
+    
+    background-color: bisque;
+
+    margin-left:10px;
+    margin-right:10px;
+
+    
+    
+   
+   
 
 }
