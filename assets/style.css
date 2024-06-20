@@ -1,4 +1,12 @@
 
+#allContent{
+
+    display:flex;
+
+    justify-content: space-around;
+    
+}
+
 
 header{
 
@@ -128,5 +136,44 @@ header{
     
    
    
+
+}
+
+#sideContent{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#recentSearchHeader{
+
+    width:500px;
+    padding:20px;
+
+    font-size: x-large;
+
+}
+
+.searchHistoryButton{
+
+    text-align: center;
+    background-color:rgb(231, 184, 184);
+    padding:10px;
+    border:none;
+    border-radius:20px;
+    font-size:20px;
+    width:500px;
+    margin-bottom:10px;
+    
+
+}
+
+.searchHistoryButton:hover{
+
+
+    cursor:pointer;
+    opacity:.9;
 
 }
