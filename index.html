@@ -39,10 +39,10 @@
 
                 <div id="infoText">
 
-                    <h1 id="cityAndDateText">Default City + Date:</h1>
-                    <h3 id="temperatureText">Temperature:</h2>
-                    <h3 id="windSpeedText">Wind Speed:</h3>
-                    <h3 id="humidityText">Humidity:</h3>
+                    <h1 id="cityAndDateText">City</h1>
+                    <h3 id="temperatureText">Temperature :</h2>
+                    <h3 id="windSpeedText">Wind Speed :</h3>
+                    <h3 id="humidityText">Humidity :</h3>
 
                 </div>
 
@@ -173,6 +173,7 @@
 
         const searchBox = document.querySelector("#searchSection input");
         const searchBtn = document.querySelector("#mainButton");
+        const weatherImgEl = document.querySelector("#weatherConditionImg")
 
         async function checkWeather(city){
 
@@ -185,11 +186,39 @@
             document.querySelector("#temperatureText").innerHTML = "Temperature : " + data.main.temp + " F";
             document.querySelector("#windSpeedText").innerHTML = "Wind Speed : " + data.wind.speed + " mph";
             document.querySelector("#humidityText").innerHTML = "Humidity : " + data.main.humidity + "%";
+
+            if(data.weather[0].main === "Clouds"){
+
+                weatherImgEl.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUimuQV5_k4SfGnfnpKVHSuch0AHIEOhO6OA&s";
+
+            } else if(data.weather[0].main === "Clear"){
+
+                weatherImgEl.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz9Aegep2VDWKXdxh54VdTDIrfseB_cWSoCg&s";
+
+            } else if(data.weather[0].main === "Drizzle"){
+
+                weatherImgEl.src="https://i.pinimg.com/564x/c9/6d/fe/c96dfe9c6b6844d6b1ffad613bb8179d.jpg";
+
+            } else if(data.weather[0].main === "Rain"){
+
+                weatherImgEl.src="https://t4.ftcdn.net/jpg/03/38/74/43/360_F_338744374_c8v4RyKnToRWqPA4SalFf8ktaMQA48QW.jpg";
+
+            } else if(data.weather[0].main === "Snow"){
+
+                weatherImgEl.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1WYip31SczTGZrcG0-771aa4EBF0PBLNseg&s";
+
+            } else if(data.weather[0].main === "Mist"){
+
+                weatherImgEl.src="https://www.shareicon.net/data/512x512/2016/07/29/803442_weather_512x512.png";
+
+            }
+
+            
         }
 
         searchBtn.addEventListener("click",()=>{
             checkWeather(searchBox.value);
-        })
+        });
         
         
         
