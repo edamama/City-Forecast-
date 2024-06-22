@@ -1,10 +1,14 @@
-
+body {
+    background-image: url("https://wallpapers.com/images/hd/light-color-background-rjelokets0ebftla.jpg");
+   }
 
 #allContent{
 
     display:flex;
 
     justify-content: space-around;
+
+    flex-wrap: wrap;
     
 }
 
@@ -28,6 +32,7 @@ header{
     display: flex;
     align-items: center;
     flex-direction: column;
+    
 
 }
 
@@ -48,6 +53,8 @@ header{
 
     background-color:ghostwhite;
     border-color:ghostwhite;
+
+    box-shadow: none;
 
 }
 
@@ -82,6 +89,9 @@ header{
 
     border:solid;
     border-radius:20px;
+    border-color:whitesmoke;
+
+    background-color: white;
 
     padding:20px;
 
@@ -121,8 +131,8 @@ header{
 
 .dayCard{
 
-    width:auto;
-    height:250px;
+    width:150px;
+    height:350px;
 
     padding-left:10px;
     padding-right:60px;
@@ -145,6 +155,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
 }
 
@@ -176,5 +187,30 @@ header{
 
     cursor:pointer;
     opacity:.9;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* query selecotr */
+
+@media screen and (max-width:1700px) {
+    
+
+    #recentSearchHeader{
+
+        margin-top:40px;
+
+    }
 
 }

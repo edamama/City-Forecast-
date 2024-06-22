@@ -57,9 +57,9 @@
 
             <div id="nextFiveDays">
 
-                <div class="dayCard">
+                <div class="dayCard" id="dayCard1">
 
-                    <h1 id="dateText">1/1/11</h1>
+                    <h1 id="dateText1">1/1/11</h1>
 
                     <div>
 
@@ -67,15 +67,15 @@
 
                     </div>
 
-                    <h2 id="temperatureText">Temperature:</h2>
-                    <h2 id="windSpeedText">Wind Speed:</h2>
-                    <h2 id="humidityText">Humidity:</h2>
+                    <h2 id="temperatureText1">Temperature :</h2>
+                    <h2 id="windSpeedText1">Wind Speed: </h2>
+                    <h2 id="humidityText1">Humidity: </h2>
 
                 </div>
 
-                <div class="dayCard">
+                <div class="dayCard" id="dayCard2">
 
-                    <h1 id="dateText">1/1/11</h1>
+                    <h1 id="dateText2">1/1/11</h1>
 
                     <div>
 
@@ -83,15 +83,15 @@
 
                     </div>
 
-                    <h2 id="temperatureText">Temperature:</h2>
-                    <h2 id="windSpeedText">Wind Speed:</h2>
-                    <h2 id="humidityText">Humidity:</h2>
+                    <h2 id="temperatureText2">Temperature:</h2>
+                    <h2 id="windSpeedText2">Wind Speed:</h2>
+                    <h2 id="humidityText2">Humidity:</h2>
 
                 </div>
 
-                <div class="dayCard">
+                <div class="dayCard" id="dayCard3">
 
-                    <h1 id="dateText">1/1/11</h1>
+                    <h1 id="dateText3">1/1/11</h1>
 
                     <div>
 
@@ -99,15 +99,15 @@
 
                     </div>
 
-                    <h2 id="temperatureText">Temperature:</h2>
-                    <h2 id="windSpeedText">Wind Speed:</h2>
-                    <h2 id="humidityText">Humidity:</h2>
+                    <h2 id="temperatureText3">Temperature:</h2>
+                    <h2 id="windSpeedText3">Wind Speed:</h2>
+                    <h2 id="humidityText3">Humidity:</h2>
 
                 </div>
 
-                <div class="dayCard">
+                <div class="dayCard" id="dayCard4">
 
-                    <h1 id="dateText">1/1/11</h1>
+                    <h1 id="dateText4">1/1/11</h1>
 
                     <div>
 
@@ -115,15 +115,15 @@
 
                     </div>
 
-                    <h2 id="temperatureText">Temperature:</h2>
-                    <h2 id="windSpeedText">Wind Speed:</h2>
-                    <h2 id="humidityText">Humidity:</h2>
+                    <h2 id="temperatureText4">Temperature:</h2>
+                    <h2 id="windSpeedText4">Wind Speed:</h2>
+                    <h2 id="humidityText4">Humidity:</h2>
 
                 </div>
 
-                <div class="dayCard">
+                <div class="dayCard" id="dayCard5">
 
-                    <h1 id="dateText">1/1/11</h1>
+                    <h1 id="dateText5">1/1/11</h1>
 
                     <div>
 
@@ -131,9 +131,9 @@
 
                     </div>
 
-                    <h2 id="temperatureText">Temperature:</h2>
-                    <h2 id="windSpeedText">Wind Speed:</h2>
-                    <h2 id="humidityText">Humidity:</h2>
+                    <h2 id="temperatureText5">Temperature:</h2>
+                    <h2 id="windSpeedText5">Wind Speed:</h2>
+                    <h2 id="humidityText5">Humidity:</h2>
 
                 </div>
                 
@@ -212,6 +212,42 @@
                 weatherImgEl.src="https://www.shareicon.net/data/512x512/2016/07/29/803442_weather_512x512.png";
 
             }
+
+            //set attributes for bottom cards as well
+            
+
+            document.querySelector("#temperatureText1").innerHTML = "Temperature : " + data.main.temp + " F";
+            document.querySelector("#temperatureText2").innerHTML = "Temperature : " + data.main.temp + " F";
+            document.querySelector("#temperatureText3").innerHTML = "Temperature : " + data.main.temp + " F";
+            document.querySelector("#temperatureText4").innerHTML = "Temperature : " + data.main.temp + " F";
+            document.querySelector("#temperatureText5").innerHTML = "Temperature : " + data.main.temp + " F";
+
+            document.querySelector("#windSpeedText1").innerHTML = "Wind Speed : " + data.wind.speed + " mph";
+            document.querySelector("#windSpeedText2").innerHTML = "Wind Speed : " + data.wind.speed + " mph";
+            document.querySelector("#windSpeedText3").innerHTML = "Wind Speed : " + data.wind.speed + " mph";
+            document.querySelector("#windSpeedText4").innerHTML = "Wind Speed : " + data.wind.speed + " mph";
+            document.querySelector("#windSpeedText5").innerHTML = "Wind Speed : " + data.wind.speed+ " mph";
+
+            document.querySelector("#humidityText1").innerHTML = "Humidity : " + data.main.humidity + "%";
+            document.querySelector("#humidityText2").innerHTML = "Humidity : " + data.main.humidity + "%";
+            document.querySelector("#humidityText3").innerHTML = "Humidity : " + data.main.humidity + "%";
+            document.querySelector("#humidityText4").innerHTML = "Humidity : " + data.main.humidity + "%";
+            document.querySelector("#humidityText5").innerHTML = "Humidity : " + data.main.humidity + "%";
+
+            
+            var currentDate = new Date()
+            let month = currentDate.getMonth();
+            let date = currentDate.getDate();
+            let year = currentDate.getFullYear();
+
+            document.querySelector("#dateText1").innerHTML = month + " /" + (date + 1) + " /" + year;
+            document.querySelector("#dateText2").innerHTML = month + " /" + (date + 2) + " /" + year;
+            document.querySelector("#dateText3").innerHTML = month + " /" + (date + 3) + " /" + year;
+            document.querySelector("#dateText4").innerHTML = month + " /" + (date + 4) + " /" + year;
+            document.querySelector("#dateText5").innerHTML = month + " /" + (date + 5) + " /" + year;
+
+
+
 
             
         }
